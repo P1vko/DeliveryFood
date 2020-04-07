@@ -2,6 +2,11 @@
    box-sizing: border-box;
 }
 
+body  {
+   margin: 0;
+   padding: 0;
+}
+
 .container {
    max-width: 1200px;
    margin: auto;
@@ -11,6 +16,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   margin-top: 45px;
 }
 
 .search-input {
