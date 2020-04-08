@@ -238,22 +238,22 @@ body  {
    margin-right: 21px;
 }
 
-.tomagazine {
+.card {
    text-decoration: none;
 }
 
-.tomagazine:link {
+.card:link {
    color: #000000;
 }
 
-.tomagazine:hover {
+.card:hover {
    color: #000000;
 }
 
-.tomagazine:visited {
+.card:visited {
    color: #000000;
 }
 
-.tomagazine:visited:hover {
+.card:visited:hover {
    color: #000000;
 }
