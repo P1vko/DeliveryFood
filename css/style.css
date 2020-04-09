@@ -28,7 +28,7 @@ body  {
 }
 
 .input-address {
-   width: 690px;
+   flex: 0.8;
    background-image: url(../img/home.svg);
 }
 
@@ -52,6 +52,12 @@ body  {
    color: #595959;
    font-size: 16px;
    line-height: 24px;
+   transition: 0.2s;
+}
+
+.button:hover {
+   transform: scale(1.1);
+   transition: 0.2s;
 }
 
 .button-primary {
@@ -71,6 +77,10 @@ body  {
    margin-right: 6px;
 }
 
+.main {
+   background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+
 .heading {
    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
    background: #FFF1B8 url(../img/heading-image.png) no-repeat top -100px right -147px / 625px;
@@ -86,9 +96,11 @@ body  {
    font-size: 39px;
    line-height: 46px;
    color: #302C34;
+   margin-bottom: 15px;
 }
 
 .heading-text {
+   margin: 0;
    max-width: 540px;
    font-size: 24px;
    line-height: 28px;
@@ -124,10 +136,13 @@ body  {
    border-radius: 7px;
    overflow: hidden; 
    margin-bottom: 30px;
+   transition: 0.2s;
 }
 
 .card:hover {
-   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.20);
+   transform: scale(1.025);
+   transition: 0.2s;
 }
 
 .card-image {
@@ -207,6 +222,8 @@ body  {
 }
 
 .footer {
+   max-width: 1200px;
+   margin: auto;
    display: flex;
    padding-bottom: 60px;
    padding-top: 60px;
@@ -224,6 +241,14 @@ body  {
    color: #595959;
    font-size: 18px;
    line-height: 21px;
+   transition: 0.3s;
+   padding-bottom: 1px;
+}
+
+.nav-link:hover {
+   border-bottom: 1px solid #595959;
+   transition: 0.3s;
+   color: #333333;
 }
 
 .social {
@@ -256,4 +281,169 @@ body  {
 
 .card:visited:hover {
    color: #000000;
+}
+
+@media (max-width: 1366px) {
+   .container, .footer {
+      max-width: 960px;
+   }
+   .heading {
+      background-position: center right -157px;
+      background-size: 530px;
+   }
+   .cards {
+      justify-content: space-around;
+   }
+}
+
+@media (max-width: 992px) {
+   .container, .footer {
+      max-width: 750px;
+   }
+   .heading {
+      padding: 50px;
+      background-size: 450px;
+      background-position: center right -180px;
+   }
+   .heading-title {
+      font-size: 33px;
+      line-height: 40px;
+   }
+   .heading-text {
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 420px;
+   }
+   .cards{ 
+      justify-content: space-between;
+   }
+   .card {
+      flex-basis: 49%;
+   }
+   .nav-item {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 768px) {
+   .container, .footer {
+      max-width: 560px;
+   }
+   .card-info {
+      flex-wrap: wrap;
+   }
+   .rating {
+      flex-basis: 100%;
+   }
+   .footer-nav {
+      flex-basis:35%;
+      margin: auto;
+   }
+   .nav-link {
+      line-height: 25px;
+   }
+   .input-address {
+      flex: 0.70;
+   }
+   .button-primary {
+      margin-right: 7px;
+   }
+   .heading {
+      background-size: 300px;
+      background-position: bottom 50px right -170px;
+   }
+   .heading-title {
+      font-size: 26px;
+      line-height: 1.2;
+   }
+}
+
+@media (max-width: 578px) {
+   .container, .footer {
+      width: 90%;
+   }
+   .header {
+      flex-wrap: wrap;
+   }
+   .input-address {
+      margin-top: 15px;
+      order: 5;
+      flex: 1;
+   }
+   .heading {
+      background-image: none;
+   }
+   .heading-title {
+      margin-bottom: 10px;
+   }
+   .heading-text {
+      font-size: 18px;
+      line-height: 1.3;
+   }
+   .section-heading {
+      flex-wrap: wrap;
+   }
+   .section-title {
+      font-size: 26px;
+      flex-basis: 100%;
+      margin-bottom: 15px;
+   }
+   .input-search {
+      flex: 1;
+   }
+   .card {
+      flex-basis: 100%;
+   }
+   .card-image {
+      width: 100%;
+      height: auto;
+   }
+   .footer {
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+   .footer-nav {
+      order: 1;
+      flex-wrap: nowrap;
+      flex-basis: 100%;
+      flex-direction: column;
+      margin-top: 20px;
+   }
+   .social {
+      margin: 0;
+   }
+   .nav-link {
+      flex: 1;
+   }
+}
+
+@media (max-width: 375px) {
+   .buttons {
+      flex: 1;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 20px;
+      justify-content: space-around;
+   }
+   .input-address {
+      margin-top: 20px;
+   }
+   .footer-nav {
+      flex-wrap: wrap;
+      flex-basis: 70%;
+   }
+   .link:not(:last-child) {
+      margin-right: 15px;
+   }
+   .heading {
+      padding: 25px;
+   }
+}
+
+@media (max-width: 320px) {
+   .footer-nav {
+      flex-basis: 90%;
+      margin-left: 15%;
+      margin-top: 20px;
+   }
 }
